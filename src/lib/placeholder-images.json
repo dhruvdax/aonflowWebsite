@@ -1,0 +1,214 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Animated flow diagram showing icons of major platforms connecting through a central hub.",
+      "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnRlZ3JhdGlvbiUyMGh1YnxlbnwwfHx8fDE3NTk3NDkxMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "integration hub"
+    },
+    {
+      "id": "why-nocode",
+      "description": "UI screenshot of a 'flow builder' canvas.",
+      "imageUrl": "https://images.unsplash.com/photo-1748168515449-5f379e77a775?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxub2NvZGUlMjBidWlsZGVyfGVufDB8fHx8MTc1OTc0OTExNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nocode builder"
+    },
+    {
+      "id": "why-datasync",
+      "description": "Two apps exchanging data arrows with a lightning icon between them.",
+      "imageUrl": "https://ik.imagekit.io/8whe7ozaw/screen.jpg",
+      "imageHint": "data sync"
+    },
+    {
+      "id": "why-reliability",
+      "description": "A dashboard with uptime, status, and metrics indicators.",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZXRyaWNzJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc1OTc0OTExNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "metrics dashboard"
+    },
+    {
+      "id": "core-value-prop",
+      "description": "Interactive visual of a flow from Salesforce to Business Central.",
+      "imageUrl": "/group-logos.svg",
+      "imageHint": "data flow"
+    },
+    {
+      "id": "how-it-works-1",
+      "description": "Icons of apps with selection animation.",
+      "imageUrl": "/how-it-works-1.png",
+      "imageHint": "app icons"
+    },
+    {
+      "id": "how-it-works-2",
+      "description": "Screenshot of Aonflow UI canvas for building a flow.",
+      "imageUrl": "https://images.unsplash.com/photo-1693592401248-c95444518318a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxVSSUyMGNhbnZhc3xlbnwwfHx8fDE3NTk3NDkxMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "UI canvas"
+    },
+    {
+      "id": "how-it-works-3",
+      "description": "Real-time log screen with green 'Success' indicators.",
+      "imageUrl": "https://images.unsplash.com/photo-1650612817816-cc1f57b0c585?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdWNjZXNzJTIwbG9nc3xlbnwwfHx8fDE3NTk3NDkxMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "success logs"
+    },
+    {
+      "id": "about-mission",
+      "description": "Illustration of a person with a bow and arrow hitting a target.",
+      "imageUrl": "/about-us/our-mission.svg",
+      "imageHint": "mission target"
+    },
+    {
+      "id": "about-vision",
+      "description": "Illustration of a person looking through a telescope on top of a bar chart.",
+      "imageUrl": "/about-us/our-vision.png",
+      "imageHint": "vision future"
+    },
+    {
+      "id": "about-hiring",
+      "description": "Illustration of people at a desk working on hiring.",
+      "imageUrl": "/about-us/hiring.svg",
+      "imageHint": "hiring careers"
+    },
+    {
+      "id": "team-sanjeev",
+      "description": "Portrait of Sanjeev Munjal",
+      "imageUrl": "/about-us/sanjeev.jpg",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-manish",
+      "description": "Portrait of Manish Joshi",
+      "imageUrl": "/about-us/munish.jpg",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-jawad",
+      "description": "Portrait of A. Jawad Khan",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjExNDUzMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-achal",
+      "description": "Portrait of Achal Singhal",
+      "imageUrl": "/about-us/achal.jpeg",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "solutions-automation",
+      "description": "Illustration of a robot and a person interacting with a UI.",
+      "imageUrl": "/healthcare-automation.svg",
+      "imageHint": "robot human collaboration"
+    },
+    {
+      "id": "healthcare-hero",
+      "description": "Illustration of two doctors standing with healthcare icons around them.",
+      "imageUrl": "/healthcare/healthcare-automation.svg",
+      "imageHint": "doctors healthcare"
+    },
+    {
+      "id": "healthcare-doctor",
+      "description": "Illustration of a doctor working on a laptop at a desk.",
+      "imageUrl": "/healthcare/healthcare-automation-fact.svg",
+      "imageHint": "doctor computer"
+    },
+    {
+      "id": "saas-hero",
+      "description": "Illustration for SaaS Automation hero section",
+      "imageUrl": "/ipaas-for-saas/saas-automation.svg",
+      "imageHint": "saas automation"
+    },
+    {
+      "id": "saas-fact",
+      "description": "Illustration for SaaS fact section",
+      "imageUrl": "/ipaas-for-saas/saas-automation-fact.svg",
+      "imageHint": "saas fact chart"
+    },
+    {
+      "id": "salesforce-related-article",
+      "description": "An abstract illustration showing CRM data connections.",
+      "imageUrl": "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDUk0lMjBkYXRhfGVufDB8fHx8MTc2MTE5MDUxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "CRM data"
+    },
+    {
+      "id": "product-hero-old",
+      "description": "Abstract visualization of the Aonflow platform's architecture and connections.",
+      "imageUrl": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "abstract platform architecture"
+    },
+    {
+      "id": "product-architecture",
+      "description": "A diagram illustrating the enterprise-grade architecture of Aonflow.",
+      "imageUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "enterprise architecture diagram"
+    },
+    {
+      "id": "product-hero",
+      "description": "A woman pointing at a flow diagram.",
+      "imageUrl": "/product/hero.svg",
+      "imageHint": "flow diagram"
+    },
+    {
+      "id": "team-prince",
+      "description": "Portrait of Prince Rangan",
+      "imageUrl": "/about-us/prince.jpeg",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "career-hero",
+      "description": "Illustration of a woman in a professional setting.",
+      "imageUrl": "/career/business-woman.jpg",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "career-culture",
+      "description": "Illustration of diverse team members collaborating.",
+      "imageUrl": "/career/culture.svg",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "partner-hero",
+      "description": "Business people shaking hands in a meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496130141-209d200ce88c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidXNpbmVzcyUyMHNoYWtpbmclMjBoYW5kc3xlbnwwfHx8fDE3NjEyNzk2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business handshake"
+    },
+    {
+      "id": "cloud-integration-hero",
+      "description": "Illustration for Cloud Integration hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1598956421870-c7c3f7141dd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjbG91ZCUyMGludGVncmF0aW9uJTIwZGlhZ3JhbXxlbnwwfHx8fDE3NjM3MDg0MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud integration diagram"
+    },
+    {
+      "id": "cloud-integration-low-code",
+      "description": "Low-code platform UI",
+      "imageUrl": "https://images.unsplash.com/photo-1655012325191-cce51f22e234?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsb3ctY29kZSUyMGludGVyZmFjZXxlbnwwfHx8fDE3NjM3MDkyNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "low-code interface"
+    },
+    {
+      "id": "cloud-integration-future-ready",
+      "description": "Cloud analytics dashboard",
+      "imageUrl": "/cloud-integration/cloud-fact-2.png",
+      "imageHint": "cloud analytics dashboard"
+    },
+    {
+      "id": "cloud-integration-cloud-native",
+      "description": "Cloud architecture diagram",
+      "imageUrl": "/cloud-integration/cloud-fact-3.png",
+      "imageHint": "cloud architecture diagram"
+    },
+    {
+      "id": "cloud-integration-batch-data",
+      "description": "Data processing workflow",
+      "imageUrl": "/cloud-integration/cloud-fact-5.svg",
+      "imageHint": "data processing workflow"
+    },
+    {
+      "id": "cloud-integration-real-time-app",
+      "description": "Connected applications interface",
+      "imageUrl": "/cloud-integration/cloud-fact-4.svg",
+      "imageHint": "connected applications"
+    },
+    {
+      "id": "cloud-integration-fact",
+      "description": "Illustration for cloud integration fact section",
+      "imageUrl": "https://ik.imagekit.io/8whe7ozaw/cloud-integration/cloud-integration-fact.svg",
+      "imageHint": "cloud chart"
+    }
+  ]
+}

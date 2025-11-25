@@ -1,0 +1,221 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 97.5%;
+    --foreground: 223 9% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 223 9% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 9% 10%;
+    --primary: 226 82% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 223 9% 10%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 230 67% 96%;
+    --accent-foreground: 223 9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 226 82% 51%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 8px;
+  }
+
+  .dark {
+    --background: 223 9% 10%;
+    --foreground: 0 0% 96.1%;
+    --card: 223 9% 13%;
+    --card-foreground: 0 0% 96.1%;
+    --popover: 223 9% 10%;
+    --popover-foreground: 0 0% 96.1%;
+    --primary: 226 82% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 223 9% 20%;
+    --secondary-foreground: 0 0% 96.1%;
+    --muted: 223 9% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 223 9% 20%;
+    --accent-foreground: 0 0% 96.1%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 223 9% 25%;
+    --input: 223 9% 25%;
+    --ring: 226 82% 51%;
+    --radius: 8px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .bg-primary {
+    @apply bg-primary-gradient;
+  }
+  .bg-primary\/10 {
+    background-color: hsl(var(--primary) / 0.1);
+  }
+  .bg-primary\/5 {
+    background-color: hsl(var(--primary) / 0.05);
+  }
+  .text-primary {
+    color: hsl(var(--primary));
+  }
+  /* Force consistent fonts and colors inside blog post content */
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-family: 'Poppins', sans-serif !important;
+    color: hsl(var(--foreground)) !important;
+  }
+  .prose p, .prose li, .prose blockquote, .prose a, .prose strong, .prose em {
+    font-family: 'Poppins', sans-serif !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+  .prose a {
+    color: hsl(var(--primary)) !important;
+  }
+  .prose a:hover {
+    color: hsl(var(--primary) / 0.8) !important;
+  }
+  .prose strong {
+    color: hsl(var(--foreground)) !important;
+  }
+}
+
+@layer utilities {
+  .text-blue-custom {
+    color: #1e3a8a;
+  }
+  
+  .animate-tab-progress::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: hsl(var(--primary));
+    animation: tab-progress 5s linear forwards;
+    transform-origin: left;
+  }
+
+  @keyframes tab-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes pulse-outline {
+    0% {
+      box-shadow: 0 0 0 0px hsla(226, 83%, 19%, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 20px hsla(226, 83%, 19%, 0);
+    }
+  }
+
+  .animate-pulse-outline {
+    animation: pulse-outline 2s infinite;
+  }
+
+  @keyframes pulse-outline-black {
+    0% {
+      box-shadow: 0 0 0 0px hsla(226, 83%, 19%, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 0 20px hsla(226, 83%, 19%, 0);
+    }
+  }
+
+  .animate-pulse-outline-black {
+    animation: pulse-outline-black 2s infinite;
+  }
+
+  @keyframes gradient-rotate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes slide-in-from-bottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+  }
+
+  .animate-slide-in-from-bottom {
+      animation: slide-in-from-bottom 0.5s ease-out forwards;
+  }
+  
+  .scrolling-logos {
+    display: flex;
+    width: max-content;
+  }
+
+  .scrolling-logos-content {
+    display: flex;
+    flex-shrink: 0;
+    animation: scroll 40s linear infinite;
+    gap: 3rem; 
+  }
+  
+  .scrolling-logos.reverse .scrolling-logos-content {
+    animation-direction: reverse;
+  }
+  
+  .group:hover .scrolling-logos-content {
+      animation-play-state: paused;
+  }
+
+  .logo-item {
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  .logo-item:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.05);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}

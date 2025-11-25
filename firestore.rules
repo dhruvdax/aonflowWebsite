@@ -1,0 +1,45 @@
+/**
+ * @fileoverview Firestore Security Rules for the Aonflow application.
+ *
+ * Core Philosophy:
+ * This ruleset prioritizes allowing any user, even unauthenticated ones, to submit contact form data,
+ * while strictly restricting read access to authorized personnel only. Write operations are
+ * completely open, and no authorization checks are enforced. Read operations are denied completely
+ * from the client.
+ *
+ * Data Structure:
+ * Contact form submissions are stored in the `contact_form_submissions` collection. Each document
+ * represents a single submission and includes fields like name, email, company, and message.
+ *
+ * Key Security Decisions:
+ * - Unauthenticated users can submit contact forms.
+ * - Client-side reads are forbidden to prevent unauthorized data access.
+ *
+ * Denormalization for Authorization:
+ *  Not applicable in this case. The ruleset does not rely on user-based authorization for the
+ *  `contact_form_submissions` collection, as any user can submit the form.
+ *
+ * Structural Segregation:
+ *  All contact form submissions are stored in a single top-level collection (`contact_form_submissions`).
+ *  There is no segregation of public vs. private data for contact form submissions.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows anyone to create contact form submissions, but denies all reads.
+     * @path /contact_form_submissions/{contactFormSubmissionId}
+     * @allow (create) Any unauthenticated user can create a submission.
+     * @deny (get, list, update, delete) No one can read, update, or delete submissions from the client side.
+     * @principle Allows public writes but restricts all reads from the client.
+     */
+    match /contact_form_submissions/{contactFormSubmissionId} {
+      allow get: if false;
+      allow list: if false;
+      allow create: if true;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}
