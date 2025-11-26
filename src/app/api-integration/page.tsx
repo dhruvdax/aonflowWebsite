@@ -125,7 +125,7 @@ export default function ApiIntegrationPage() {
                 </p>
                 <div className="mt-8">
                     <Button asChild size="lg">
-                        <Link href="/contact">Book a Demo</Link>
+                        <Link href="/book-a-demo">Book a Demo</Link>
                     </Button>
                 </div>
             </AnimateOnScroll>
@@ -218,7 +218,7 @@ export default function ApiIntegrationPage() {
                            Connect systems and automate processes in just a matter of minutes.
                         </p>
                         <Button variant="secondary" asChild>
-                            <Link href="/contact">Book a Demo</Link>
+                            <Link href="/book-a-demo">Book a Demo</Link>
                         </Button>
                     </AnimateOnScroll>
                 </div>

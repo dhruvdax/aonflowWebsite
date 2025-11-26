@@ -258,13 +258,13 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            variant="ghost"
+            variant="outline"
             className={cn(
               "hidden lg:inline-flex",
               "text-foreground hover:bg-accent hover:text-accent-foreground"
             )}
           >
-            <Link href="/contact">Book a demo</Link>
+            <Link href="/book-a-demo">Book a demo</Link>
           </Button>
           <Button className="hidden lg:inline-flex">Sign Up</Button>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -281,7 +281,7 @@ export function Header() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background text-foreground p-0">
+            <SheetContent side="right" className="bg-background text-foreground p-0 w-full">
                 <SheetHeader className="sr-only">
                     <SheetTitle>Mobile Navigation Menu</SheetTitle>
                     <SheetDescription>
@@ -373,7 +373,7 @@ export function Header() {
                 <div className="p-6 pt-0 mt-auto">
                     <div className="flex flex-col gap-4">
                         <Button asChild variant="outline" className="animated-gradient-border">
-                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Book a demo</Link>
+                            <Link href="/book-a-demo" onClick={() => setIsMobileMenuOpen(false)}>Book a demo</Link>
                         </Button>
                         <Button asChild>
                             <Link href="#" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</Link>

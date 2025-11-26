@@ -175,7 +175,7 @@ export default function B2BIntegrationPage() {
                 </p>
                 <div className="mt-8">
                     <Button asChild size="lg">
-                        <Link href="/contact">Book a demo</Link>
+                        <Link href="/book-a-demo">Book a demo</Link>
                     </Button>
                 </div>
             </AnimateOnScroll>
@@ -268,7 +268,7 @@ export default function B2BIntegrationPage() {
                            You can kick-start by integrating your first-ever workflow in just a matter of minutes.
                         </p>
                         <Button variant="secondary" asChild>
-                            <Link href="/contact">Book a Demo</Link>
+                            <Link href="/book-a-demo">Book a Demo</Link>
                         </Button>
                     </AnimateOnScroll>
                 </div>

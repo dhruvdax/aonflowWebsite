@@ -234,7 +234,7 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                  <Link href="/contact">
+                  <Link href="/book-a-demo">
                     Book a Demo
                   </Link>
                 </Button>
