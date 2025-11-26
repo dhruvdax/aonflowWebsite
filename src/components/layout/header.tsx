@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import Link from "next/link";
@@ -266,7 +267,7 @@ export function Header() {
           >
             <Link href="/book-a-demo">Book a demo</Link>
           </Button>
-          <Button className="hidden lg:inline-flex">Sign Up</Button>
+          <Button asChild className="hidden lg:inline-flex"><Link href="https://app.aonflow.com/auth/signup">Sign Up</Link></Button>
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild className="lg:hidden">
               <Button
@@ -376,7 +377,7 @@ export function Header() {
                             <Link href="/book-a-demo" onClick={() => setIsMobileMenuOpen(false)}>Book a demo</Link>
                         </Button>
                         <Button asChild>
-                            <Link href="#" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</Link>
+                            <Link href="https://app.aonflow.com/auth/signup" onClick={() => setIsMobileMenuOpen(false)}>Sign Up</Link>
                         </Button>
                     </div>
                 </div>

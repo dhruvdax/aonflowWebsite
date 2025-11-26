@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Image from 'next/image';
@@ -173,7 +174,7 @@ export default function SalesforceBusinessCentralIntegrationPage() {
                         </p>
                         <div className="mt-8 flex gap-4">
                             <Button asChild size="lg">
-                                <Link href="#">Get Started For Free</Link>
+                                <Link href="https://app.aonflow.com/auth/signup">Get Started For Free</Link>
                             </Button>
                             <Button asChild size="lg" variant="outline">
                                 <Link href="/contact">Book a Demo</Link>
@@ -268,7 +269,7 @@ export default function SalesforceBusinessCentralIntegrationPage() {
                                Build and run up to 5,000 transactions monthly with no cost. No payment info needed!
                             </p>
                             <Button variant="secondary" asChild>
-                                <Link href="#">Sign Up Now</Link>
+                                <Link href="https://app.aonflow.com/auth/signup">Sign Up Now</Link>
                             </Button>
                         </AnimateOnScroll>
                     </div>
@@ -380,7 +381,7 @@ export default function SalesforceBusinessCentralIntegrationPage() {
                                 </div>
                             </div>
                              <p className="text-xs text-white/80 mt-8 max-w-3xl mx-auto">
-                                PLEASE NOTE: To access Salesforce with Microsoft Dynamics Business Central integration, <Link href="/contact" className="underline hover:opacity-80">sign up</Link> for an Aonflow account. Unlock the potential of seamless connectivity and leverage our integration solutions. Create your free account today!
+                                PLEASE NOTE: To access Salesforce with Microsoft Dynamics Business Central integration, <Link href="https://app.aonflow.com/auth/signup" className="underline hover:opacity-80">sign up</Link> for an Aonflow account. Unlock the potential of seamless connectivity and leverage our integration solutions. Create your free account today!
                             </p>
                         </AnimateOnScroll>
                     </div>

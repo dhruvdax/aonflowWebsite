@@ -1,4 +1,5 @@
 
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -79,7 +80,7 @@ const CtaBlock2 = () => (
                     </p>
                 </div>
                 <Button asChild size="lg" className="mt-4 w-full md:mt-0 md:w-auto text-primary-foreground">
-                    <Link href="#">Sign Up Now</Link>
+                    <Link href="https://app.aonflow.com/auth/signup">Sign Up Now</Link>
                 </Button>
             </div>
         </CardContent>

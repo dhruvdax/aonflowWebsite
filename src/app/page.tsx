@@ -228,7 +228,7 @@ export default function Home() {
               </p>
               <div className="flex w-full max-w-sm flex-col gap-4 sm:max-w-none sm:flex-row sm:justify-center">
                 <Button asChild size="lg" className="w-full sm:w-auto animate-pulse-outline group">
-                  <Link href="#">
+                  <Link href="https://app.aonflow.com/auth/signup">
                     Start for Free
                     <ArrowRight className="transition-transform group-hover:translate-x-1" />
                   </Link>
@@ -504,7 +504,7 @@ export default function Home() {
                 </p>
                 <div className="mt-6">
                   <Button size="lg" variant="secondary" asChild className="animate-pulse-outline-black">
-                    <Link href="#">Build Your First Flow – Free</Link>
+                    <Link href="https://app.aonflow.com/auth/signup">Build Your First Flow – Free</Link>
                   </Button>
                 </div>
               </div>
