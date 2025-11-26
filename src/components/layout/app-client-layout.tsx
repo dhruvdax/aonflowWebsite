@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -18,18 +19,28 @@ export function AppClientLayout({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const handleLoad = () => {
       setIsLoading(false);
-    }, 2000); 
+    };
 
-    return () => clearTimeout(timer);
+    // If the page is already loaded, don't show the preloader
+    if (document.readyState === 'complete') {
+      handleLoad();
+    } else {
+      window.addEventListener('load', handleLoad);
+    }
+    
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
   }, []);
 
   useEffect(() => {
     if (!isLoading) {
       gsap.to('.preloader-container', {
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         onComplete: () => {
           gsap.set('.preloader-container', { display: 'none' });
         }
