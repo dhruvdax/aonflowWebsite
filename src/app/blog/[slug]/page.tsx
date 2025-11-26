@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { BackgroundAnimation } from "@/components/background-animation";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
+import type { Metadata, ResolvingMetadata } from 'next'
 
 type WPPost = {
   id: number;
@@ -26,6 +27,10 @@ type WPPost = {
   };
 };
 
+type Props = {
+  params: { slug: string }
+}
+
 const API = "https://www.aonflow.com/blog/wp-json/wp/v2";
 
 async function getPostBySlug(slug: string): Promise<WPPost | null> {
@@ -36,6 +41,39 @@ async function getPostBySlug(slug: string): Promise<WPPost | null> {
   if (!res.ok) return null;
   const arr = (await res.json()) as WPPost[];
   return arr?.[0] ?? null;
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.slug
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found - Aonflow Blog',
+      description: 'The post you are looking for could not be found.',
+    }
+  }
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || []
+
+  const featuredImage = getFeaturedImage(post);
+
+  return {
+    title: `${post.title.rendered} - Aonflow Blog`,
+    description: post.excerpt.rendered.replace(/<[^>]+>/g, ''), // Strip HTML for description
+    alternates: {
+      canonical: `https://www.aonflow.com/blog/${post.slug}`,
+    },
+    openGraph: {
+      title: post.title.rendered,
+      description: post.excerpt.rendered.replace(/<[^>]+>/g, ''),
+      images: featuredImage ? [featuredImage, ...previousImages] : previousImages,
+    },
+  }
 }
 
 function getFeaturedImage(post: WPPost): string | null {
