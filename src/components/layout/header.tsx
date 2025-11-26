@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X, LayoutGrid, Cloud, Cog, Database, Landmark } from "lucide-react";
+import { Menu, X, LayoutGrid, Cloud, Cog, Database, Landmark, Bot } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -245,6 +245,14 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
+               <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/generator" className={cn(triggerClasses(), "gap-1")}>
+                    <Bot /> AI Generator
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
                   <Link href="/contact" className={triggerClasses()}>
@@ -363,6 +371,10 @@ export function Header() {
                                     ))}
                                 </AccordionContent>
                                 </AccordionItem>
+                                
+                                <Link href="/generator" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-1 text-lg font-medium py-3">
+                                  <Bot /> AI Generator
+                                </Link>
 
                                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium py-3">Contact Us</Link>
 
