@@ -168,7 +168,6 @@ const parserOptions: HTMLReactParserOptions = {
                                width={widthNum}
                                height={heightNum}
                                className="object-cover w-full h-auto"
-                               unoptimized
                            />
                        </div>
                      );
@@ -197,7 +196,6 @@ const parserOptions: HTMLReactParserOptions = {
                             width={widthNum}
                             height={heightNum}
                             className="object-cover w-full h-auto"
-                            unoptimized
                         />
                     </div>
                 );
@@ -279,7 +277,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
                             fill
                             className="object-cover"
                             priority
-                            unoptimized
                         />
                     </div>
                 )}
