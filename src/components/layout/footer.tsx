@@ -118,7 +118,7 @@ export function Footer() {
                 <div className="text-sm text-muted-foreground flex gap-6 items-center">
                     <span>&copy; {new Date().getFullYear()} Aonflow</span>
                     <Link href="/cookie-policy" className="hover:text-primary">Cookie Policy</Link>
-                    <Link href="/sitemap.xml" className="hover:text-primary">Sitemap</Link>
+                    <Link href="/sitemap" className="hover:text-primary">Sitemap</Link>
                 </div>
 
                 <div className="flex items-center gap-4 mt-4 sm:mt-0">

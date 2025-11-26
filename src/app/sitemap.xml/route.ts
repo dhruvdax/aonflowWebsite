@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 
 type WPPost = {
@@ -98,8 +99,7 @@ async function getAllPosts(): Promise<WPPost[]> {
 }
 
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-
+export async function GET() {
   const blogPosts = await getAllPosts();
 
   const postEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
@@ -115,9 +115,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly',
     priority: route === '' ? 1 : 0.8,
   }));
+  
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${[...staticEntries, ...postEntries]
+    .map(
+      (route) => `
+    <url>
+      <loc>${route.url}</loc>
+      <lastmod>${route.lastModified?.toISOString()}</lastmod>
+      <changefreq>${route.changeFrequency}</changefreq>
+      <priority>${route.priority}</priority>
+    </url>
+  `
+    )
+    .join('')}
+</urlset>`;
 
-  return [
-    ...staticEntries,
-    ...postEntries,
-  ];
+  return new Response(sitemap, {
+    headers: {
+      'Content-Type': 'application/xml',
+    },
+  });
 }
