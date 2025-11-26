@@ -244,14 +244,6 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
-               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link href="/generator" className={cn(triggerClasses(), "gap-1")}>
-                    <Bot /> AI Generator
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
@@ -371,10 +363,6 @@ export function Header() {
                                     ))}
                                 </AccordionContent>
                                 </AccordionItem>
-                                
-                                <Link href="/generator" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-1 text-lg font-medium py-3">
-                                  <Bot /> AI Generator
-                                </Link>
 
                                  <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium py-3">Contact Us</Link>
 
