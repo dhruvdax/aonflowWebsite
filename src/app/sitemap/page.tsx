@@ -146,7 +146,7 @@ export default async function SitemapPage() {
             </Card>
           </AnimateOnScroll>
         ))}
-         <AnimateOnScroll delay={Object.keys(staticRoutes).length * 0.1}>
+         <AnimateOnScroll delay={Object.keys(staticRoutes).length * 0.1} className="md:col-span-2">
           <Card className="h-full">
             <CardHeader>
               <CardTitle className="text-primary">Blog Posts</CardTitle>
