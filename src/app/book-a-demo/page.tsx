@@ -24,9 +24,6 @@ export default function BookADemoPage() {
             <h1 className="text-4xl font-light tracking-tight font-headline sm:text-5xl md:text-6xl text-primary">
               Book a Demo
             </h1>
-            <p className="max-w-3xl text-muted-foreground md:text-xl">
-              Our demo is designed to give you an in-depth look at what we offer and how it can benefit your business. During the demo, you'll have the opportunity to ask questions, see our product/service in action, and get a feel for how it works.
-            </p>
              <p className="max-w-3xl text-muted-foreground md:text-lg">
               To schedule a demo, simply schedule the call as per your convenience.
             </p>
