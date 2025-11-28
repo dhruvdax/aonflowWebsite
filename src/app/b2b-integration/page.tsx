@@ -13,3 +13,5 @@ export const metadata: Metadata = {
 export default function B2BIntegrationPage() {
     return <B2BIntegrationClientPage />;
 }
+
+    

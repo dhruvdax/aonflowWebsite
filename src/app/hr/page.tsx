@@ -13,3 +13,5 @@ export const metadata: Metadata = {
 export default function HRPage() {
     return <HRClientPage />;
 }
+
+    

@@ -107,7 +107,7 @@ const benefits = [
         points: [
             "Deliver personalized service, quicker response times, and meaningful interactions.",
             "Eliminate manual data entry errors, ensuring customers have access to accurate and up-to-date information.",
-        ]
+        ],
     },
     {
         icon: BrainCircuit,
@@ -116,7 +116,7 @@ const benefits = [
         points: [
             "Simplify and optimize the entire deal desk process from quotes to approvals.",
             "Automate onboarding and data collection for new customers, improving efficiency and reducing manual errors.",
-        ]
+        ],
     },
     {
         icon: FileCog,
@@ -125,7 +125,7 @@ const benefits = [
         points: [
             "Simplify your payment process, ensuring a seamless transition for customer success initiatives and billing.",
             "Automate invoice generation, payment monitoring, and fulfillment to save time and improve operational efficiency.",
-        ]
+        ],
     },
     {
         icon: Scaling,
@@ -134,7 +134,7 @@ const benefits = [
         points: [
             "Track customer usage and interactions to uncover upsell and cross-sell opportunities.",
             "Automate tracking of account activity to identify upsell and cross-sell opportunities and drive revenue growth.",
-        ]
+        ],
     }
 ];
 
@@ -346,3 +346,5 @@ export default function SalesPageClient() {
     </div>
   );
 }
+
+    

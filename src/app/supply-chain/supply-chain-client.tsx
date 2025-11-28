@@ -12,13 +12,12 @@ import {
   Repeat,
   Scaling,
   Check,
-  Eye,
-  XCircle,
+  LineChart,
+  Target,
   BarChart,
-  GitBranch,
-  Star,
   BrainCircuit,
-  FileCog
+  FileCog,
+  FileText
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -26,147 +25,126 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { BackgroundAnimation } from '@/components/background-animation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect } from 'react';
-import { EmpowerIcon } from '@/components/by-function-icons';
 
 
 const transformingFeatures = [
     {
-        icon: Eye,
-        title: "Gain complete visibility",
-        description: "Eliminate blind spots and gain full visibility into the customer journey with multiple layers of point‑and‑click automation. Automate tasks and processes that are repetitive and tedious."
+        icon: LineChart,
+        title: "Automated Order Management",
+        description: "Integrate your sales channels with your ERP to automate order processing, reducing manual errors and accelerating fulfillment."
     },
     {
-        icon: XCircle,
-        title: "Eliminate human errors",
-        description: "Streamline processes and eliminate human errors with built‑in automation. Automate manual tasks like orders, customer service, payments and more while maintaining a high quality level."
+        icon: Target,
+        title: "Real-Time Inventory Sync",
+        description: "Keep inventory levels accurate across all platforms, preventing stockouts and overselling."
+    },
+    {
+        icon: BarChart,
+        title: "Enhanced Supplier Collaboration",
+        description: "Automate purchase orders, invoices, and shipment notifications to improve communication and efficiency with your suppliers."
     },
     {
         icon: Users,
-        title: "Optimize customer engagement",
-        description: "Empower your customers with tailored experiences using Aonflow’s iPaaS automated solutions, personalized recommendations and timely notifications for higher customer satisfaction, retention and increased brand loyalty."
-    },
-    {
-        icon: Check,
-        title: "Improve issue resolution",
-        description: "Add value for customers by automating issue resolution. Quickly identify and remediate customer issues with smart automation, reducing the time it takes to resolve them."
+        title: "Improved Logistics and Fulfillment",
+        description: "Integrate with 3PLs and shipping carriers to automate shipping labels, tracking, and delivery updates."
     }
 ];
 
 const whyAonflowTabs = [
     {
-      value: "insights",
+      value: "visibility",
       icon: Layers,
-      label: "Holistic Insights",
-      title: "Achieve a complete customer journey with holistic insights",
+      label: "End-to-End Visibility",
+      title: "Gain end-to-end visibility into your supply chain",
       points: [
-        "Unified customer data – stay ahead with real-time updates and harness the power of data consolidation.",
-        "Predict churn & create tickets – automate data capture, gain insights and swiftly address user obstacles with IPA.",
-        "Personalized offers, nurturing customers – automated promotions and tailored discounts based on purchase history and website activity.",
-        "Analyze cart abandonment data – leverage AI‑driven analytics for customer insights and comprehensive reporting capabilities.",
-        "Automate customer service – pre‑define conditions to streamline inquiries, notifications and process refunds for efficient processes.",
-        "Real‑time monitoring for engagement – achieve complete understanding and make smarter decisions by monitoring interactions in real time."
+        "Track inventory levels in real-time across all warehouses and sales channels.",
+        "Monitor order status from placement to delivery.",
+        "Get a complete view of your supply chain with a centralized data hub.",
+        "Identify bottlenecks and optimize your supply chain with data-driven insights.",
+        "Improve forecasting with accurate, real-time data.",
+        "Enhance collaboration with a single source of truth for all supply chain data.",
       ]
     },
     {
-      value: "intelligent-support",
-      icon: BrainCircuit,
-      label: "Intelligent Support",
-      title: "Get intelligent support instantly with our AI‑powered system",
+      value: "efficiency",
+      icon: Zap,
+      label: "Increased Efficiency",
+      title: "Increase efficiency with automated workflows",
       points: [
-        "Swift customer issue resolution – escalate and resolve problems effortlessly, minimizing downtime and maximizing service efficiency.",
-        "Boost productivity with automation – eliminate tedious task transitions, maximizing efficiency and reducing manual effort.",
-        "Real‑time response to inquiries – integrate essential applications for prompt and efficient customer support services for enhanced resolution.",
-        "Unify support – integrate your customer support stack with Aonflow’s iPaaS for a streamlined and cohesive experience.",
-        "Efficient support for operations – consolidate processes for streamlined customer support, maximizing productivity and service effectiveness.",
-        "Exceptional support experiences – maximize customer satisfaction with Aonflow’s iPaaS, delivering excellence at every customer interaction."
+        "Automate order processing, from order entry to fulfillment.",
+        "Streamline procurement with automated purchase orders and invoicing.",
+        "Reduce manual data entry and errors with automated data sync.",
+        "Improve team productivity by automating repetitive tasks.",
+        "Accelerate order fulfillment with automated shipping and tracking.",
+        "Optimize resource allocation with automated workflows.",
       ]
     },
     {
-      value: "feedback",
-      icon: EmpowerIcon,
-      label: "Feedback Power",
-      title: "Unleash the power of customer feedback to maximize service impact",
+      value: "collaboration",
+      icon: Users,
+      label: "Improved Collaboration",
+      title: "Improve collaboration with suppliers and partners",
       points: [
-        "Seamless integration – connect customer service and development tools, eliminating extra labour and streamlining processes.",
-        "Comprehensive support – address bugs, improvements and queries efficiently by leveraging integrated applications for a holistic response.",
-        "Customer satisfaction insights – collect feedback on product features, usage patterns and valuable information to enhance product value.",
-        "Improved bug resolution – swiftly resolve bugs by leveraging the integration between customer service and development tools.",
-        "Enhancing user experience – gather insights on usage patterns across geographical locations to optimize product performance and usability.",
-        "Data‑driven decision‑making – leverage customer feedback and information to make informed decisions for service improvements."
-      ]
-    },
-     {
-      value: "prevent-churn",
-      icon: ShieldCheck,
-      label: "Prevent Churn",
-      title: "Take action now to prevent customer churn in the future",
-      points: [
-        "AI‑powered proactive approach – utilize AI to anticipate roadblocks and address user churn, contacting users at critical moments.",
-        "An agile platform for growth – adapt to evolving business needs with an automation‑driven solution supporting operational changes.",
-        "Deliver exceptional service – use automation to provide tailored customer experiences that meet customers’ needs.",
-        "Timely customer engagement – leverage AI insights to reach out to users when it truly matters for a positive impact.",
-        "Future‑proof customer service – embrace automation to stay ahead, offering excellent support as your business evolves.",
-        "Tailored experiences for customers – use automation to personalize interactions and enhance customer satisfaction."
+        "Automate communication with suppliers, from purchase orders to invoices.",
+        "Share real-time data with partners to improve coordination.",
+        "Enhance transparency with a single source of truth for all supply chain data.",
+        "Strengthen supplier relationships with improved communication and efficiency.",
+        "Reduce lead times with automated procurement and fulfillment.",
+        "Improve supply chain resilience with better collaboration and visibility.",
       ]
     }
 ];
 
 const benefits = [
     {
-        icon: Users,
-        title: "Enhanced customer satisfaction through optimized experience",
-        description: "The benefits of customer service automation: enhancing experiences and reducing costs.",
+        icon: Layers,
+        title: "Streamlined Order Management",
+        description: "Automate order processing to reduce manual errors and accelerate fulfillment.",
         points: [
-            "Streamlined customer service – automation empowers businesses to prioritize creating exceptional experiences while reducing operational costs.",
-            "Focus on excellence – with automated processes in place, businesses can devote more attention to delivering exceptional customer experiences.",
-        ]
+            "Centralize order data for a comprehensive view of your order-to-cash cycle.",
+            "Improve order accuracy with automated data validation and enrichment.",
+        ],
     },
     {
-        icon: Star,
-        title: "Enhanced customer experience for greater satisfaction",
-        description: "Accelerating customer satisfaction – automation reduces wait time and expedites inquiry resolution.",
+        icon: BrainCircuit,
+        title: "Optimized Inventory Management",
+        description: "Keep inventory levels accurate and prevent stockouts with real-time data sync.",
         points: [
-            "By leveraging automation, businesses can deliver prompt resolutions, elevating overall customer satisfaction levels.",
-        ]
+            "Improve forecasting with real-time insights into inventory levels and sales trends.",
+            "Reduce carrying costs with optimized inventory management.",
+        ],
     },
     {
-        icon: Zap,
-        title: "Boosted efficiency and heightened productivity levels",
-        description: "Optimizing productivity – streamline customer service operations with automation.",
+        icon: FileCog,
+        title: "Enhanced Supplier Collaboration",
+        description: "Automate communication and data exchange with suppliers to improve efficiency.",
         points: [
-            "Automation simplifies customer service processes, allowing agents to prioritize complex tasks and improve productivity.",
-            "By leveraging automation, businesses can allocate agent resources efficiently, maximizing productivity and enhancing customer service quality.",
-        ]
+            "Streamline procurement with automated purchase orders and invoicing.",
+            "Reduce lead times with improved communication and collaboration.",
+        ],
     },
     {
         icon: Scaling,
-        title: "Enhanced collaboration and increased visibility benefits",
-        description: "Enhancing customer service efficiency through the power of automation:",
+        title: "Improved Logistics and Fulfillment",
+        description: "Automate shipping and fulfillment to reduce costs and improve delivery times.",
         points: [
-            "Unified communication – automation enables seamless communication, improving visibility and collaboration across customer service channels.",
-            "Rapid issue identification – with automation, businesses achieve faster response times, swiftly identifying and addressing potential issues for enhanced customer service.",
-        ]
-    },
-    {
-        icon: Layers,
-        title: "Enhanced scalability for optimized business expansion",
-        description: "Scalable solutions – automated customer service for enhanced efficiency.",
-        points: [
-            "Scalable and adaptable – automated solutions adapt to business growth, improving function, efficiency and time‑saving.",
-            "Consistent handling – automation ensures consistent customer service inquiries handling, regardless of business size or complexity, with Aonflow’s solutions.",
-        ]
+            "Integrate with 3PLs and shipping carriers to automate shipping labels and tracking.",
+            "Improve customer satisfaction with real-time delivery updates.",
+        ],
     }
 ];
 
 
-export default function CustomerSupportPageClient() {
+export default function SupplyChainClientPage() {
 
     const [activeTab, setActiveTab] = useState(whyAonflowTabs[0].value);
     const [isTabCarouselPaused, setIsTabCarouselPaused] = useState(false);
+    const supplyChainFactImage = PlaceHolderImages.find(p => p.id === 'supply-chain-fact');
   
     useEffect(() => {
       if (isTabCarouselPaused) return;
@@ -189,10 +167,10 @@ export default function CustomerSupportPageClient() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <AnimateOnScroll>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-headline text-foreground">
-                    Customer Support Automation
+                    Manufacturing & Supply Chain Automation
                 </h1>
                 <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-                   Revolutionize your customer experience and drive revenue with intelligent automation solutions.
+                   Link your supply chain end-to-end, automate key operations, and simplify business complexities with Aonflow's iPaaS solutions.
                 </p>
                 <div className="mt-8">
                     <Button asChild size="lg">
@@ -202,12 +180,12 @@ export default function CustomerSupportPageClient() {
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.2} className="flex justify-center">
                 <Image
-                    src="/customer-support/customer-support-automation.svg"
-                    alt="Customer Support Automation"
+                    src="/supply-chain/supply-chain-automation.svg"
+                    alt="Supply Chain Automation"
                     width={500}
                     height={400}
                     className="object-contain"
-                    data-ai-hint="customer support"
+                    data-ai-hint="supply chain"
                 />
             </AnimateOnScroll>
           </div>
@@ -218,7 +196,7 @@ export default function CustomerSupportPageClient() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
             <AnimateOnScroll className="text-center max-w-3xl mx-auto">
-                <h2 className="text-3xl font-bold font-headline">Supercharge customer support: streamline, automate and elevate</h2>
+                <h2 className="text-3xl font-bold font-headline">Automate your entire supply chain, from procurement to fulfillment</h2>
             </AnimateOnScroll>
              <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
                 {transformingFeatures.map((feature, index) => (
@@ -244,19 +222,21 @@ export default function CustomerSupportPageClient() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <AnimateOnScroll className="flex justify-center">
-                        <Image
-                            src="/customer-support/customer-support-fact.svg"
-                            alt="Customer Support statistics"
-                            width={400}
-                            height={400}
-                            className="object-contain"
-                            data-ai-hint="customer experience chart"
-                        />
+                       {supplyChainFactImage && (
+                            <Image
+                                src={supplyChainFactImage.imageUrl}
+                                alt="Supply Chain Statistics"
+                                width={400}
+                                height={400}
+                                className="object-contain"
+                                data-ai-hint={supplyChainFactImage.imageHint}
+                            />
+                        )}
                     </AnimateOnScroll>
                     <AnimateOnScroll delay={0.2}>
-                        <h2 className="text-3xl font-bold mb-4">83% of customers trust brands that prioritize exemplary customer experience</h2>
+                        <h2 className="text-3xl font-bold mb-4">79% of companies with high-performing supply chains achieve revenue growth greater than the average for their industries.</h2>
                         <p className="text-lg opacity-90">
-                           Maximize customer experience with Aonflow iPaaS. Harness the power of Artificial Intelligence (AI), Intelligent Process Automation (IPA) and advanced analytics to optimize operations, gain comprehensive insight and achieve real‑time visibility across all channels. Benefit from automated workflows, precise analysis and reliable service while keeping clients updated and avoiding unnecessary complications.
+                           Gain a competitive advantage by automating your supply chain. Our powerful iPaaS solution enables you to streamline workflows, enhance efficiency, and drive revenue growth. Join the ranks of successful businesses that leverage automation to outperform the competition.
                         </p>
                     </AnimateOnScroll>
                 </div>
@@ -268,10 +248,7 @@ export default function CustomerSupportPageClient() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
             <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl font-bold font-headline">Why Aonflow for <span className="text-primary">Customer Support Automation?</span></h2>
-                 <p className="mt-4 text-muted-foreground">
-                    Aonflow’s approach is holistic, intelligent, maximizes results and delivers instant outcomes.
-                </p>
+                <h2 className="text-3xl font-bold font-headline">Why Aonflow for <span className="text-primary">Supply Chain Automation?</span></h2>
             </AnimateOnScroll>
 
             <AnimateOnScroll 
@@ -287,7 +264,7 @@ export default function CustomerSupportPageClient() {
                 }}
                 className="w-full"
             >
-                <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto bg-transparent p-0 border-b">
+                <TabsList className="grid w-full grid-cols-3 h-auto bg-transparent p-0 border-b">
                     {whyAonflowTabs.map(tab => (
                         <TabsTrigger 
                             key={tab.value} 
@@ -326,7 +303,7 @@ export default function CustomerSupportPageClient() {
         <BackgroundAnimation className="absolute inset-0 z-0 opacity-50" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
              <AnimateOnScroll className="text-center max-w-3xl mx-auto mb-12">
-                <h2 className="text-3xl font-bold font-headline">Benefits of Aonflow <span className="text-primary">Customer Support Automation</span></h2>
+                <h2 className="text-3xl font-bold font-headline">Benefits of Aonflow <span className="text-primary">Supply Chain Automation</span></h2>
             </AnimateOnScroll>
 
             <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">

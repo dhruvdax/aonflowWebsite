@@ -209,6 +209,12 @@
       "description": "Illustration for cloud integration fact section",
       "imageUrl": "https://ik.imagekit.io/8whe7ozaw/cloud-integration/cloud-integration-fact.svg",
       "imageHint": "cloud chart"
+    },
+    {
+      "id": "supply-chain-fact",
+      "description": "Illustration for supply chain fact section",
+      "imageUrl": "/supply-chain/supply-chain-fact.svg",
+      "imageHint": "supply chain chart"
     }
   ]
 }

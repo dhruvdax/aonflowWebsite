@@ -13,3 +13,5 @@ export const metadata: Metadata = {
 export default function CustomerSupportPage() {
     return <CustomerSupportPageClient />;
 }
+
+    

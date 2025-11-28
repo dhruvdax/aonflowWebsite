@@ -402,3 +402,5 @@ export default function B2BIntegrationClientPage() {
     </div>
   );
 }
+
+    

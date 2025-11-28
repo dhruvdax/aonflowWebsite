@@ -13,3 +13,5 @@ export const metadata: Metadata = {
 export default function ApiIntegrationPage() {
     return <ApiIntegrationClientPage />;
 }
+
+    
