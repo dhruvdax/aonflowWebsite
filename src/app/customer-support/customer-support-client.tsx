@@ -364,7 +364,7 @@ export default function CustomerSupportPageClient() {
             <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
                  <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in action</h2>
                 <Button asChild size="lg">
-                    <Link href="/contact">Book a Demo</Link>
+                    <Link href="/contact">Connect Now</Link>
                 </Button>
             </AnimateOnScroll>
         </section>
@@ -372,5 +372,3 @@ export default function CustomerSupportPageClient() {
     </div>
   );
 }
-
-    
