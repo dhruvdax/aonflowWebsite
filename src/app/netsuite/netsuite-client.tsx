@@ -40,7 +40,6 @@ import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { BackgroundAnimation } from '@/components/background-animation';
 import { cn } from '@/lib/utils';
 import { useState, useEffect, useRef } from 'react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay";
 import React from 'react';
