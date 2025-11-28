@@ -50,6 +50,7 @@ import {
   UserPlus,
   FileSignature,
   Lightbulb,
+  Briefcase,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -549,3 +550,6 @@ export default function Dynamics365Page() {
 
     
 
+
+
+    
