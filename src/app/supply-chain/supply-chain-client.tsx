@@ -180,7 +180,7 @@ export default function SupplyChainClientPage() {
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.2} className="flex justify-center">
                 <Image
-                    src="/supply-chain/supply-chain-automation.svg"
+                    src="/supply-chain/supply-chain-automation.png"
                     alt="Supply Chain Automation"
                     width={500}
                     height={400}
@@ -350,4 +350,3 @@ export default function SupplyChainClientPage() {
   );
 }
 
-    
