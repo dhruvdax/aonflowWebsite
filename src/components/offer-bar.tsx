@@ -34,7 +34,7 @@ export function OfferBar() {
           <p className="flex items-center">
             <Gift className="mr-2 hidden h-5 w-5 sm:inline-block" />
             <span className="font-semibold">Year End Offer:</span>
-            <Link href="/pricing" className="ml-2 underline hover:opacity-80">
+            <Link href="https://app.aonflow.com/auth/signup" className="ml-2 underline hover:opacity-80">
               Unlock Aonflow Free for 30 Days – No Code, No Risk, Unlimited Possibilities!
             </Link>
           </p>
