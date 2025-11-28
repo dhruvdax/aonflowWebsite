@@ -8,45 +8,21 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 import { FirebaseClientProvider } from '@/firebase';
 import { OfferBar } from '@/components/offer-bar';
-import { Preloader } from '@/components/preloader';
-import { gsap } from 'gsap';
 
 export function AppClientLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    // If the page is already loaded, don't show the preloader
-    if (document.readyState === 'complete') {
-      handleLoad();
-    } else {
-      window.addEventListener('load', handleLoad);
-    }
-    
-    // Cleanup the event listener
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    setMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (!isLoading) {
-      gsap.to('.preloader-container', {
-        opacity: 0,
-        duration: 0.5,
-        onComplete: () => {
-          gsap.set('.preloader-container', { display: 'none' });
-        }
-      });
-    }
-  }, [isLoading]);
+  if (!mounted) {
+    return null; // Or a very simple loading spinner if you prefer, but null is safest to avoid hydration issues.
+  }
 
   return (
       <ThemeProvider
@@ -56,7 +32,6 @@ export function AppClientLayout({
         disableTransitionOnChange
       >
         <FirebaseClientProvider>
-          {isLoading && <div className="preloader-container"><Preloader /></div>}
           <div className="flex min-h-screen flex-col">
             <OfferBar />
             <Header />
