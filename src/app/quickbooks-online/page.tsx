@@ -21,6 +21,7 @@ import {
   Lightbulb,
   DollarSign,
   Briefcase,
+  GitBranch,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -330,11 +331,11 @@ export default function QuickBooksOnlinePage() {
         </div>
       </section>
 
-      {/* Flow with Aonflow Section */}
+      {/* See Aonflow in Action Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <AnimateOnScroll>
-                <h2 className="text-3xl font-bold font-headline mb-12">Flow with Aonflow</h2>
+                <h2 className="text-3xl font-bold font-headline mb-12">See Aonflow in Action</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     {[
                         {icon: Lightbulb, label: "Simple", description: "Simplicity is power"},
@@ -536,9 +537,9 @@ export default function QuickBooksOnlinePage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">Flow with Aonflow</h2>
-            <Button asChild>
-                <Link href="/contact">See demo</Link>
+            <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in Action</h2>
+            <Button asChild size="lg">
+                <Link href="/contact">Connect Now</Link>
             </Button>
         </AnimateOnScroll>
       </section>
@@ -546,5 +547,7 @@ export default function QuickBooksOnlinePage() {
     </div>
   );
 }
+
+    
 
     
