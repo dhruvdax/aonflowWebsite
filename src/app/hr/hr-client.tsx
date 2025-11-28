@@ -19,13 +19,10 @@ import {
   CardContent,
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { BackgroundAnimation } from '@/components/background-animation';
 import { AutomationIcon, SeamlessDataExchangeIcon, AutomatedDataProcessingIcon, EnhancedPatientCareIcon, TransformedHealthcareDeliveryIcon, SeamlessIcon, EmpowerIcon } from '@/components/by-function-icons';
 import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react';
-
 
 const transformingFeatures = [
     {
@@ -145,21 +142,6 @@ const benefits = [
 
 
 export default function HRClientPage() {
-
-    const [activeTab, setActiveTab] = useState(whyAonflowTabs[0].value);
-    const [isTabCarouselPaused, setIsTabCarouselPaused] = useState(false);
-  
-    useEffect(() => {
-      if (isTabCarouselPaused) return;
-      const tabRotationInterval = setInterval(() => {
-        setActiveTab(prevTab => {
-          const currentIndex = whyAonflowTabs.findIndex(tab => tab.value === prevTab);
-          const nextIndex = (currentIndex + 1) % whyAonflowTabs.length;
-          return whyAonflowTabs[nextIndex].value;
-        });
-      }, 5000);
-      return () => clearInterval(tabRotationInterval);
-    }, [isTabCarouselPaused]);
     
   return (
     <div className="bg-background text-foreground">
@@ -252,31 +234,16 @@ export default function HRClientPage() {
                 <h2 className="text-3xl font-bold font-headline">Why Aonflow for <span className="text-primary">HR Automation?</span></h2>
             </AnimateOnScroll>
 
-            <AnimateOnScroll 
-                delay={0.2}
-                onMouseEnter={() => setIsTabCarouselPaused(true)}
-                onMouseLeave={() => setIsTabCarouselPaused(false)}
-            >
-            <Tabs 
-                value={activeTab} 
-                onValueChange={(value) => {
-                    setActiveTab(value);
-                    setIsTabCarouselPaused(true);
-                }}
-                className="w-full"
-            >
+            <AnimateOnScroll delay={0.2}>
+            <Tabs defaultValue="automate" className="w-full">
                 <TabsList className="grid w-full grid-cols-3 h-auto bg-transparent p-0 border-b">
                     {whyAonflowTabs.map(tab => (
                         <TabsTrigger 
                             key={tab.value} 
                             value={tab.value} 
-                            className={cn("flex flex-col gap-2 h-auto py-4 px-2 data-[state=active]:bg-transparent bg-transparent text-muted-foreground data-[state=active]:text-primary data-[state=active]:shadow-[inset_0_-2px_0_hsl(var(--primary))] rounded-none",
-                                activeTab === tab.value && !isTabCarouselPaused && "animate-tab-progress"
-                            )}
+                            className="flex flex-col gap-2 h-auto py-4 px-2 data-[state=active]:bg-transparent bg-transparent text-muted-foreground data-[state=active]:text-primary data-[state=active]:shadow-[inset_0_-2px_0_hsl(var(--primary))] rounded-none"
                         >
-                            <tab.icon className={cn("h-8 w-8 transition-colors",
-                                `group-data-[state=active]:text-primary`
-                            )}/>
+                            <tab.icon className="h-8 w-8 transition-colors"/>
                             <span className="text-sm">{tab.label}</span>
                         </TabsTrigger>
                     ))}
@@ -350,5 +317,3 @@ export default function HRClientPage() {
     </div>
   );
 }
-
-    

@@ -262,9 +262,6 @@ export default function HomeClientPage() {
                         loading="lazy"
                         title="Aonflow"
                         allow="clipboard-write"
-                        frameBorder="0"
-                        webkitallowfullscreen="true"
-                        mozallowfullscreen="true"
                         allowFullScreen
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                       />
@@ -277,8 +274,7 @@ export default function HomeClientPage() {
                         src="https://www.youtube.com/embed/Q9d2JIq-G-A?si=miU41SDJvkqxky5m"
                         title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        frameBorder="0"
+                        referrerPolicy="strict-origin-when-cross-origin"                 
                         allowFullScreen
                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
                       />

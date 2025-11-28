@@ -29,7 +29,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { BackgroundAnimation } from '@/components/background-animation';
 import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react';
 import { EmpowerIcon } from '@/components/by-function-icons';
 
 
@@ -164,21 +163,6 @@ const benefits = [
 
 
 export default function CustomerSupportPageClient() {
-
-    const [activeTab, setActiveTab] = useState(whyAonflowTabs[0].value);
-    const [isTabCarouselPaused, setIsTabCarouselPaused] = useState(false);
-  
-    useEffect(() => {
-      if (isTabCarouselPaused) return;
-      const tabRotationInterval = setInterval(() => {
-        setActiveTab(prevTab => {
-          const currentIndex = whyAonflowTabs.findIndex(tab => tab.value === prevTab);
-          const nextIndex = (currentIndex + 1) % whyAonflowTabs.length;
-          return whyAonflowTabs[nextIndex].value;
-        });
-      }, 5000);
-      return () => clearInterval(tabRotationInterval);
-    }, [isTabCarouselPaused]);
     
   return (
     <div className="bg-background text-foreground">
@@ -274,31 +258,16 @@ export default function CustomerSupportPageClient() {
                 </p>
             </AnimateOnScroll>
 
-            <AnimateOnScroll 
-                delay={0.2}
-                onMouseEnter={() => setIsTabCarouselPaused(true)}
-                onMouseLeave={() => setIsTabCarouselPaused(false)}
-            >
-            <Tabs 
-                value={activeTab} 
-                onValueChange={(value) => {
-                    setActiveTab(value);
-                    setIsTabCarouselPaused(true);
-                }}
-                className="w-full"
-            >
+            <AnimateOnScroll delay={0.2}>
+            <Tabs defaultValue="insights" className="w-full">
                 <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto bg-transparent p-0 border-b">
                     {whyAonflowTabs.map(tab => (
                         <TabsTrigger 
                             key={tab.value} 
                             value={tab.value} 
-                            className={cn("flex flex-col gap-2 h-auto py-4 px-2 data-[state=active]:bg-transparent bg-transparent text-muted-foreground data-[state=active]:text-primary data-[state=active]:shadow-[inset_0_-2px_0_hsl(var(--primary))] rounded-none",
-                                activeTab === tab.value && !isTabCarouselPaused && "animate-tab-progress"
-                            )}
+                            className="flex flex-col gap-2 h-auto py-4 px-2 data-[state=active]:bg-transparent bg-transparent text-muted-foreground data-[state=active]:text-primary data-[state=active]:shadow-[inset_0_-2px_0_hsl(var(--primary))] rounded-none"
                         >
-                            <tab.icon className={cn("h-8 w-8 transition-colors",
-                                `group-data-[state=active]:text-primary`
-                            )}/>
+                            <tab.icon className="h-8 w-8 transition-colors"/>
                             <span className="text-sm">{tab.label}</span>
                         </TabsTrigger>
                     ))}
