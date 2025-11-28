@@ -312,9 +312,9 @@ export default function ProductClientPage() {
        {/* Final CTA */}
       <section className="py-20 md:py-28">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-2xl font-bold font-headline mb-4">Let's start creating flows</h2>
+            <h2 className="text-2xl font-bold font-headline mb-4">See Aonflow in Action</h2>
             <Button asChild>
-                <Link href="/contact">Book a Demo</Link>
+                <Link href="/contact">Connect Now</Link>
             </Button>
         </AnimateOnScroll>
       </section>
