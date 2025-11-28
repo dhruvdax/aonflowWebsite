@@ -49,6 +49,7 @@ import {
   FileUp,
   UserPlus,
   FileSignature,
+  Lightbulb,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -365,7 +366,7 @@ export default function Dynamics365Page() {
         </div>
       </section>
 
-      {/* Flow with Aonflow Section */}
+      {/* See Aonflow in Action Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <AnimateOnScroll>
@@ -547,3 +548,4 @@ export default function Dynamics365Page() {
     
 
     
+
