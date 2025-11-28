@@ -237,7 +237,7 @@ export default function HowItWorksClientPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-primary/5">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-             <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in action</h2>
+             <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in Action</h2>
             <Button asChild>
                 <Link href="/contact">Connect Now</Link>
             </Button>
