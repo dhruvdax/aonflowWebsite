@@ -33,7 +33,6 @@ import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { AnimatedIcon } from '@/components/animated-icon';
 import { PopupForm } from '@/components/popup-form';
 import { cn } from '@/lib/utils';
-import { type Metadata } from 'next';
 
 
 const integrationCategories = [
