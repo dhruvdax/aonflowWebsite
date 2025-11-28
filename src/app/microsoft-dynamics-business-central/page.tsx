@@ -570,9 +570,9 @@ export default function BusinessCentralPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">Flow with Aonflow</h2>
-            <Button asChild>
-                <Link href="/contact">See demo</Link>
+            <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in Action</h2>
+            <Button asChild size="lg">
+                <Link href="/contact">Connect Now</Link>
             </Button>
         </AnimateOnScroll>
       </section>
@@ -580,3 +580,4 @@ export default function BusinessCentralPage() {
     </div>
   );
 }
+
