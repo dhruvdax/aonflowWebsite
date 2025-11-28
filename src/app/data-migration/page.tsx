@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import Image from 'next/image';
@@ -15,6 +16,15 @@ import {
   ReliabilityIcon,
 } from '@/components/by-function-icons';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { type Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Data Migration Automation | Aonflow',
+    description: "Migrate data between systems without extensive custom coding, while keeping costs low. Our tools ensure accuracy and security.",
+    alternates: {
+        canonical: 'https://www.aonflow.com/data-migration',
+    },
+};
 
 const revolutionFeatures = [
     {

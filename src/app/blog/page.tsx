@@ -10,6 +10,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, Tag, ChevronsLeft, ChevronLeft, ChevronRight, ChevronsRight } from "lucide-react";
+import { type Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Aonflow Blog - Latest on Integration and Automation',
+    description: "Explore the latest articles, insights, and news on iPaaS, application integration, and business process automation from the Aonflow team.",
+    alternates: {
+        canonical: 'https://www.aonflow.com/blog',
+    },
+};
 
 interface WPPost {
   id: number;

@@ -20,6 +20,16 @@ import {
 } from '@/components/by-function-icons';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { type Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Cloud Integration Solutions | Aonflow',
+    description: "Connect cloud-based software, enabling your organization to become truly data-driven. Leverage our iPaaS solution to break down data silos and streamline processes.",
+    alternates: {
+        canonical: 'https://www.aonflow.com/cloud-integration',
+    },
+};
+
 
 const revolutionFeatures = [
     {
