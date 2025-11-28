@@ -164,7 +164,7 @@ const faqs = [
             <div>
                 <p className="mb-2">Aonflow provides support for flow activation for near real-time updates and scheduled syncs for periodic batches:</p>
                 <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Flow Activation:</strong> Best for data requiring immediate updates such as new leads, stages of deals, and campaign enrollments. When a trigger event happens in HubSpot (or another connected app), Aonflow’s iPaaS platform kickstarts the process to push or pull data.</li>
+                    <li><strong>Flow Activation (Event-Based):</strong> Best for data requiring immediate updates such as new leads, stages of deals, and campaign enrollments. When a trigger event happens in HubSpot (or another connected app), Aonflow’s iPaaS platform kickstarts the process to push or pull data.</li>
                     <li><strong>Scheduled Sync:</strong> This is ideal for larger or non-time-sensitive data sets (like daily lead exports). You can schedule flows to run every hour, day, or any other custom timeframe, which assists in limiting performance performance and API calls.</li>
                 </ul>
                 <p className="mt-2">This flexibility allows you to focus on things that require immediate attention and process bulk updates with ease.</p>
@@ -345,7 +345,7 @@ export default function HubspotPage() {
             <AnimateOnScroll className="text-center max-w-3xl mx-auto">
                 <h2 className="text-3xl font-bold font-headline">How Aonflow works for you</h2>
                 <p className="mt-4 text-muted-foreground">
-                    Automate your business processes and workflows between Hubspot and other apps with Aonflow. Our platform simplifies the integration process and allows you to create custom workflows, such as automatically adding new contacts to your email marketing platform or notifying your sales team of new leads. Aonflow's iPaaS technology saves time and increases productivity by streamlining processes and unlocking new growth opportunities for your business.
+                    Aonflow's iPaaS solution streamlines HubSpot integration with other applications, providing automation for workflows and tasks across the organization. The user-friendly interface allows for easy setup of connectors and workflows, mapping data, and automation to improve efficiency. Pre-built connectors for Salesforce, Slack, and more are available, while triggers and actions automate tasks across apps. Aonflow helps centralize data and improve productivity.
                 </p>
             </AnimateOnScroll>
             <AnimateOnScroll 
@@ -404,7 +404,7 @@ export default function HubspotPage() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <AnimateOnScroll>
-                <h2 className="text-3xl font-bold font-headline mb-12">Flow with Aonflow</h2>
+                <h2 className="text-3xl font-bold font-headline mb-12">See Aonflow in Action</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     {[
                         {icon: Lightbulb, label: "Simple", description: "Simplicity is power"},
@@ -634,9 +634,9 @@ export default function HubspotPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">Flow with Aonflow</h2>
+            <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in Action</h2>
             <Button asChild size="lg">
-                <Link href="/contact">See demo</Link>
+                <Link href="/contact">Connect Now</Link>
             </Button>
         </AnimateOnScroll>
       </section>
@@ -644,3 +644,7 @@ export default function HubspotPage() {
     </div>
   );
 }
+
+    
+
+    

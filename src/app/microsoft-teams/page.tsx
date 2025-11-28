@@ -57,30 +57,30 @@ const teamsAutomationTabs = [
     icon: BrainCircuit,
     label: "Integration",
     title: "Microsoft Teams integration, made easy",
-    subtitle: "Unlock the full potential for businesses to drive productivity, collaboration, and growth",
-    content: "Aonflow's low-code builder enables users to easily integrate Microsoft Teams with other business tools to automate workflow processes, streamline team communication, and send notifications and alerts. Teams can leverage easy integration into popular tools like Salesforce and Hubspot to drive productivity and collaboration across the organization. Reducing manual tasks and streamlining workflows help in achieving greater efficiency.",
-    subcontentTitle: "One self-service platform for all your Microsoft Teams integration solutions",
-    subcontent: "Integrating Microsoft Teams with project management tools can greatly enhance team communication and collaboration. By connecting these tools, teams can keep track of project progress and deadlines, assign tasks to team members, and communicate real-time updates, all from the Teams platform. This allows for streamlined communication and more efficient collaboration, leading to improved productivity and project success."
+    subtitle: "Simplified Slack integration and automation capabilities",
+    content: "Connect Slack apps to your tech stack with Aonflow's user-friendly integration connector. No coding is needed. Integrations can be created within minutes using the low-code builder capabilities. Advanced features like pop-ups, channels, and modal alerts are available. Website data can be shared through the webhook to streamline workflows. Aonflow's solution is the perfect way to boost efficiency.",
+    subcontentTitle: "Unlock the full potential of Slack with Aonflow's integration platform",
+    subcontent: "Creating Slack integrations become faster and easier with Aonflow. Enable automated dataflow from Slack inputs to seamlessly integrate with other applications, achieving real-time data synchronization. Integrating Slack with other cloud services enables teams to stay updated with the latest functions and operations. Slack becomes more than just a basic chat tool, unlocking its full potential and capabilities."
   },
   {
     value: "automation",
     icon: FileCog,
     label: "Automation",
     title: "Microsoft Teams automation, made simple",
-    subtitle: "Automate processes and unleash the full potential of Teams integration",
-    content: "Our Microsoft Teams connector lets businesses easily integrate Teams with other cloud-based services using our low-code builder. Teams can be connected with any other application by simply dragging and dropping, streamlining workflows, and increasing productivity. Automated workflows can route customer support tickets to specific Teams channels based on the nature of the issue, enabling quick resolution and collaboration.",
-    subcontentTitle: "All-in-one intuitive platform for all your Microsoft Teams automation solutions",
-    subcontent: "Automate processes in Microsoft Teams with our integration tool, from simple notifications and reminders to complex workflows involving multiple applications. Trigger Teams channels creation automatically based on specific events, new projects in a project management tool, or send messages and notifications based on task completion in a workflow tool. Streamline, increase efficiency, and improve collaboration within Teams."
+    subtitle: "Unlock the power of Slack integration with Aonflow’s iPaaS automation",
+    content: "Leverage automation to increase productivity with easy API integrations for Slack using the Aonflow Platform. Trigger operations from any cloud-based service to connect and streamline processes at scale, resulting in increased ROI and growth across all organizational functions, including finance, sales, marketing, IT, HR, etc. Simplify and accelerate workflows, enabling teams to work more efficiently and effectively.",
+    subcontentTitle: "Boost your team's productivity with automation across various use cases",
+    subcontent: "Slack automation can help teams to streamline their workflows and boost their productivity across a range of use cases. Whether it's managing projects, messaging, alerting, approvals, or sales deals, it can handle it all. By automating repetitive tasks, teams can focus on more strategic work, leading to increased efficiency and productivity, ensuring nothing falls through the cracks."
   },
   {
     value: "use-case",
     icon: Layers,
     label: "Use Case",
     title: "Microsoft Teams use case, resolved",
-    subtitle: "Streamline processes and improve collaboration and communication across Teams",
-    content: "Integrate HR tools with Microsoft Teams to automate team creation for new hires with dedicated channels for different departments. HR teams can set up automated messages to welcome new hires, introduce them to colleagues, and educate them on company policies and procedures. Save time and ensure consistency in the onboarding process, improving the experience for new hires.",
-    subcontentTitle: "Automate incident management with Microsoft Teams integration for IT tools",
-    subcontent: "Connect IT tools with Microsoft Teams and automatically create channels for different types of incidents, system outages, or security breaches. IT teams can set up notifications to alert when an incident occurs, and automatically assign tasks to the team for resolution of issues. The automation streamlines the incident management process and ensures that issues are timely addressed."
+    subtitle: "Enjoy combined capabilities of Slack and Aonflow integration & automation solutions",
+    content: "Aonflow's Slack automation offers more than just basic chat functionality. It allows easy data transfer between messages, channels, and menus, as well as creating new channels and issuing alerts in response to specific triggers. Revenue and business teams use automation to manage complex processes, RFP approvals, performance dashboards, and even HR onboarding, offboarding, and employee lifecycle updates.",
+    subcontentTitle: "Enhance workflows and streamline reporting with our integration and automation",
+    subcontent: "Leverage Slack's features to establish powerful workflows and reduce the need for meetings and manual updates. Aonflow Platform allows technical teams to integrate their helpdesk tickets, service calls, code deploys, and other events tracked by their tech stack into a complete reporting and alerting system. Business users can also use Slack automation to improve processes and productivity."
   }
 ];
 
@@ -126,7 +126,7 @@ export default function MicrosoftTeamsPage() {
                       <BrainCircuit className="h-10 w-10 text-primary mb-4" />
                       <h3 className="text-2xl font-bold font-headline mb-2">Connect. Integrate. Automate.</h3>
                       <p className="text-muted-foreground flex-grow">
-                          Integrate Microsoft Teams with Aonflow to automate tasks, create Teams channels, send notifications, and update files. This simplifies collaboration and communication, allowing for streamlined workflows and increased productivity. With Aonflow's low-code builder, custom workflows can be built quickly and easily without the need for coding, enhancing overall efficiency.
+                          Integrating Microsoft Teams with Aonflow to automate tasks, create Teams channels, send notifications, and update files. This simplifies collaboration and communication, allowing for streamlined workflows and increased productivity. With Aonflow's low-code builder, custom workflows can be built quickly and easily without the need for coding, enhancing overall efficiency.
                       </p>
                   </Card>
               </div>
@@ -205,7 +205,7 @@ export default function MicrosoftTeamsPage() {
                                      <p className="text-muted-foreground">{tab.subcontent}</p>
                                  </div>
                              </div>
-                              <div className="text-center mt-6">
+                             <div className="text-center mt-6">
                                 <Button asChild>
                                     <Link href="/contact">Book a Demo</Link>
                                 </Button>
@@ -222,7 +222,7 @@ export default function MicrosoftTeamsPage() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <AnimateOnScroll>
-                <h2 className="text-3xl font-bold font-headline mb-12">Flow with Aonflow</h2>
+                <h2 className="text-3xl font-bold font-headline mb-12">See Aonflow in Action</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     {[
                         {icon: Lightbulb, label: "Simple", description: "Simplicity is power"},
@@ -363,12 +363,16 @@ export default function MicrosoftTeamsPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">Flow with Aonflow</h2>
+            <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in Action</h2>
             <Button asChild size="lg">
-                <Link href="/contact">See demo</Link>
+                <Link href="/contact">Connect Now</Link>
             </Button>
         </AnimateOnScroll>
       </section>
     </div>
   );
 }
+
+    
+
+    

@@ -12,29 +12,16 @@ import {
   Repeat,
   Scaling,
   Check,
-  LineChart,
-  Target,
-  BarChart,
   BrainCircuit,
   FileCog,
-  FileText,
-  Heart,
-  Hand,
   Lightbulb,
   DollarSign,
   Briefcase,
-  GitBranch,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Card
 } from '@/components/ui/card';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { BackgroundAnimation } from '@/components/background-animation';
@@ -43,6 +30,26 @@ import { useState, useEffect, useRef } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay";
 import React from 'react';
+
+
+const aonflowForIntegration = [
+    {
+        icon: Zap,
+        title: "Slack integration for automation solutions"
+    },
+    {
+        icon: BrainCircuit,
+        title: "Automate with low-code builder for your needs"
+    },
+    {
+        icon: Layers,
+        title: "Fluid automation architecture to instantly scale"
+    },
+    {
+        icon: ShieldCheck,
+        title: "Robust in-built enterprise security for your data"
+    }
+];
 
 const slackAutomationTabs = [
   {
@@ -75,25 +82,6 @@ const slackAutomationTabs = [
     subcontentTitle: "Enhance workflows and streamline reporting with our integration and automation",
     subcontent: "Leverage Slack's features to establish powerful workflows and reduce the need for meetings and manual updates. Aonflow Platform allows technical teams to integrate their helpdesk tickets, service calls, code deploys, and other events tracked by their tech stack into a complete reporting and alerting system. Business users can also use Slack automation to improve processes and productivity."
   }
-];
-
-const aonflowForIntegration = [
-    {
-        icon: Zap,
-        title: "Slack integration for automation solutions"
-    },
-    {
-        icon: BrainCircuit,
-        title: "Automate with low-code builder for your needs"
-    },
-    {
-        icon: Layers,
-        title: "Fluid automation architecture to instantly scale"
-    },
-    {
-        icon: ShieldCheck,
-        title: "Robust in-built enterprise security for your data"
-    }
 ];
 
 export default function SlackPage() {
@@ -175,7 +163,7 @@ export default function SlackPage() {
             <AnimateOnScroll className="text-center max-w-3xl mx-auto">
                 <h2 className="text-3xl font-bold font-headline">How Aonflow works for you</h2>
                 <p className="mt-4 text-muted-foreground">
-                    Aonflow's iPaaS solution simplifies integrating Slack with other apps and automating processes. Create a new integration, select Slack, and set up automation. For instance, automatically post a message in a Slack channel when a new task is added to Trello. Refine the integration until it runs smoothly. Save time and streamline workflows by automating repetitive tasks and reducing manual data entry with Aonflow iPaaS.
+                    Aonflow iPaaS simplifies integrating Slack with other apps and automating processes. Create a new integration, select Slack, and set up automation. For instance, automatically post a message in a Slack channel when a new task is added to Trello. Refine the integration until it runs smoothly. Save time and streamline workflows by automating repetitive tasks and reducing manual data entry with Aonflow iPaaS.
                 </p>
             </AnimateOnScroll>
             <AnimateOnScroll 
@@ -234,7 +222,7 @@ export default function SlackPage() {
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 text-center">
             <AnimateOnScroll>
-                <h2 className="text-3xl font-bold font-headline mb-12">Flow with Aonflow</h2>
+                <h2 className="text-3xl font-bold font-headline mb-12">See Aonflow in Action</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     {[
                         {icon: Lightbulb, label: "Simple", description: "Simplicity is power"},
@@ -375,9 +363,9 @@ export default function SlackPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-28">
         <AnimateOnScroll className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold font-headline mb-4">Flow with Aonflow</h2>
+            <h2 className="text-3xl font-bold font-headline mb-4">See Aonflow in Action</h2>
             <Button asChild size="lg">
-                <Link href="/contact">See demo</Link>
+                <Link href="/contact">Connect Now</Link>
             </Button>
         </AnimateOnScroll>
       </section>
@@ -385,5 +373,7 @@ export default function SlackPage() {
     </div>
   );
 }
+
+    
 
     
