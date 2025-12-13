@@ -41,16 +41,16 @@ export const BackgroundAnimation: React.FC<BackgroundAnimationProps> = ({ classN
             x: mousePos.current.x,
             y: mousePos.current.y,
             duration: 2,
-            ease: 'elastic.out(1, 0.4)',
+            ease: 'power2.out',
             stagger: 0.05,
         });
-        requestAnimationFrame(moveBlobs);
     };
     
-    moveBlobs();
+    gsap.ticker.add(moveBlobs);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      gsap.ticker.remove(moveBlobs);
     };
   }, []);
 
