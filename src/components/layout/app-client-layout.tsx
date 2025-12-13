@@ -2,7 +2,6 @@
 'use client';
 
 import React from 'react';
-import { ThemeProvider } from '@/components/theme-provider';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
@@ -16,21 +15,14 @@ export function AppClientLayout({
 }>) {
 
   return (
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="light"
-        forcedTheme="light"
-        disableTransitionOnChange
-      >
-        <FirebaseClientProvider>
-          <div className="flex min-h-screen flex-col">
-            <OfferBar />
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-          <Toaster />
-        </FirebaseClientProvider>
-      </ThemeProvider>
+      <FirebaseClientProvider>
+        <div className="flex min-h-screen flex-col">
+          <OfferBar />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+        <Toaster />
+      </FirebaseClientProvider>
   );
 }
