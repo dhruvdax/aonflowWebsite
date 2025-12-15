@@ -46,6 +46,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.aonflow.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'linen-mule-572706.hostingersite.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
