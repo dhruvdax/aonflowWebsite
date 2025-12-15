@@ -34,7 +34,7 @@ export default function BlogClientPage() {
     setLoading(true);
     try {
       const res = await fetch(
-        `https://www.aonflow.com/blog/wp-json/wp/v2/posts?per_page=6&page=${pageNumber}&order=desc&orderby=date&_embed=1`
+        `https://linen-mule-572706.hostingersite.com/wp-json/wp/v2/posts?per_page=6&page=${pageNumber}&order=desc&orderby=date&_embed=1`
       );
       if (!res.ok) {
         throw new Error('Failed to fetch posts');

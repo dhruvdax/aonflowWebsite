@@ -1,4 +1,5 @@
 
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -85,7 +86,7 @@ const staticRoutes = {
   ]
 };
 
-const API_URL = 'https://www.aonflow.com/blog/wp-json/wp/v2';
+const API_URL = 'https://linen-mule-572706.hostingersite.com/wp-json/wp/v2';
 
 async function getAllPosts(): Promise<WPPost[]> {
   let allPosts: WPPost[] = [];

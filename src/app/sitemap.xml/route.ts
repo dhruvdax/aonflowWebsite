@@ -62,7 +62,7 @@ const staticRoutes = [
   '/zoho-crm',
 ];
 
-const API_URL = 'https://www.aonflow.com/blog/wp-json/wp/v2';
+const API_URL = 'https://linen-mule-572706.hostingersite.com/wp-json/wp/v2';
 const BASE_URL = 'https://www.aonflow.com';
 
 async function getAllPosts(): Promise<WPPost[]> {

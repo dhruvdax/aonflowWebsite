@@ -31,7 +31,7 @@ type Props = {
   params: { slug: string }
 }
 
-const API = "https://www.aonflow.com/blog/wp-json/wp/v2";
+const API = "https://linen-mule-572706.hostingersite.com/wp-json/wp/v2";
 
 async function getPostBySlug(slug: string): Promise<WPPost | null> {
   const res = await fetch(`${API}/posts?slug=${encodeURIComponent(slug)}&_embed=1`, {
