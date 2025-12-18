@@ -217,7 +217,7 @@ export default function BlogClientPage() {
                         </div>
                         {categories.length > 0 && (
                             <div className="flex items-center gap-1.5">
-                                <Tag className="h-3.5 w-3.5"/>
+                                <Tag className="h-3.5 w-3.5 flex-shrink-0"/>
                                 {categories.slice(0,2).map(cat => (
                                     <Link key={cat.name} href={cat.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                                         {cat.name}
