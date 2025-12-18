@@ -210,7 +210,7 @@ export default function BlogClientPage() {
                           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
                         />
                       </Link>
-                      <div className="flex items-center gap-4 text-xs text-muted-foreground mt-3">
+                      <div className="flex flex-col items-start gap-2 text-xs text-muted-foreground mt-3">
                         <div className="flex items-center gap-1.5">
                             <Calendar className="h-3.5 w-3.5"/>
                             <span>{date}</span>
